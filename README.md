@@ -11,7 +11,7 @@ To install dependencies , use the following command
 ```
 pip install -r requirements.txt
 ```
-## Command guide
+## Commandline Arguments
 
 ### To convert single file 
 
@@ -19,7 +19,7 @@ pip install -r requirements.txt
 python3 rescale_video.py -f="filepath/filename.mp4" -o="filepath/filename" (Dont need to specify .mp4 file extension for -o command)
 ```
 
--f command for desire filepath(relative or full path)
+-f for desire filepath(relative or full path)
 -o to save output file.
 
 ### To convert all videos from desire folder 
@@ -29,4 +29,4 @@ python3 rescale_video.py -d="input_filepath" -o="output_filepath"
 ```
 -d for folderpath for input files
 -o for folderpath to save output files. 
-Note: You dont need specify filename in both command.
+Note: You dont need specify filename in both command arguments.
