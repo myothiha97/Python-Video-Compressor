@@ -7,8 +7,9 @@ import glob
 
 def convert_480_300(file,save_dir):
     cap = cv2.VideoCapture(file)
-    fourcc = cv2.VideoWriter_fourcc(*'MP4V')
-    out = cv2.VideoWriter(f'{save_dir}_480.mp4',fourcc, 20.0, (480,300))
+    fourcc = cv2.VideoWriter_fourcc(*'XVID')
+    fps = cap.get(cv2.CAP_PROP_FPS)
+    out = cv2.VideoWriter(f'{save_dir}_480.mp4',fourcc, fps, (480,300))
     print("Video resolution rescale to 480x300")
     while True:
         ret, frame = cap.read()
@@ -25,8 +26,9 @@ def convert_480_300(file,save_dir):
 
 def convert_720_400(file,save_dir):
     cap = cv2.VideoCapture(file)
-    fourcc = cv2.VideoWriter_fourcc(*'MP4V')
-    out = cv2.VideoWriter(f'{save_dir}_720.mp4',fourcc, 20.0, (720,400))
+    fourcc = cv2.VideoWriter_fourcc(*'XVID')
+    fps = cap.get(cv2.CAP_PROP_FPS)
+    out = cv2.VideoWriter(f'{save_dir}_720.mp4',fourcc, fps , (720,400))
     print("Video resolution rescale to 720x400")
     while True:
         ret, frame = cap.read()
