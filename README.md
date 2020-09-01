@@ -35,3 +35,9 @@ python3 compress_video.py -d="input_folderpath" -o="output_folderpath"
 ```
 -d for folderpath for input files and -o for folderpath to save output files.
 Note: You dont need specify filename in both command arguments.
+
+### To check resolution of video file 
+
+```
+python3 compress_video.py -c="filepath/filename.mp4"
+```
